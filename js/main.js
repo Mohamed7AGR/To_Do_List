@@ -2,6 +2,7 @@ let addBtn = document.querySelector("#addBtn");
 let taskInput = document.querySelector("#taskInput");
 let mySelect = document.querySelector("#mySelect");
 let searchInput = document.querySelector("#searchInput");
+let delBtn = document.querySelector("#delBtn");
 
 let todos = [];
 if (localStorage.getItem("allToDos") !== null) {
@@ -66,7 +67,15 @@ function clear() {
   taskInput.value = "";
   taskInput.blur();
 }
+delBtn.addEventListener("click", function () {
+  deleteAll();
+});
 
+function deleteAll() {
+  todos = [];
+  localStorage.setItem("allToDos", JSON.stringify(todos));
+  filterTasks(mySelect.value);
+}
 function deleteToDo(id) {
   todos = todos.filter((task) => task.id !== id);
   localStorage.setItem("allToDos", JSON.stringify(todos));
