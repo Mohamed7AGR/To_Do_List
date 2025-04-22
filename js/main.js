@@ -46,7 +46,7 @@ function displayData(ToDo) {
           task.isCompleted ? "bg-task" : ""
         }">
             <div class="task d-flex">
-                <i class="fa-regular fa-circle-check" onclick="beCompleted('${
+                <i class="fa-regular fa-circle-check " onclick="beCompleted('${
                   task.id
                 }')"></i>
                 <p class=" m-0 p-0 align-self-center ${
@@ -67,6 +67,7 @@ function clear() {
   taskInput.value = "";
   taskInput.blur();
 }
+
 delBtn.addEventListener("click", function () {
   deleteAll();
 });
@@ -100,7 +101,6 @@ function beCompleted(id) {
 
   localStorage.setItem("allToDos", JSON.stringify(todos));
   filterTasks(mySelect.value);
-
 }
 
 function filterTasks(filterType, searchQuery = "") {
