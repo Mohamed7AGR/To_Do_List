@@ -1,0 +1,92 @@
+.toDO {
+
+  height: 100vh;
+  background-position: center;
+   background-size: cover; 
+  background-image: url("../img/download.jpg");
+}
+
+*::selection {
+  background-color: #71c55d;
+  color: #fff;
+}
+#title {
+  font-family: "Courgette", cursive;
+  color: #71c55d;
+  line-height: 1;
+  font-size: 40px;
+  font-weight: 500;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: rgb(113, 197, 93);
+  box-shadow: 0 0 0 0.25rem rgba(113, 197, 93, 0.25);
+}
+.custom-btn {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 7px 10px;
+  transition: 0.5s;
+  border-color: transparent;
+  background: #71c55d;
+  color: #fff;
+}
+.custom-btn:hover {
+  background: #5f9b50;
+  color: #fff;
+}
+
+.tasks {
+  background-color: #71c55d;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.tasks i {
+  padding: 10px;
+}
+.tasks i:hover {
+  color: red;
+}
+.bg-task {
+  background-color: #f55f44;
+}
+
+a {
+  color: #444;
+  font-family: "Philosopher", sans-serif;
+  margin-left: 20px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.nav-underline .nav-link.active,
+.nav-underline .show > .nav-link {
+  color: #71c55d;
+}
+a:hover {
+  color: #71c55d;
+}
+
+.line::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  height: 2px;
+  background-color: #71c55d;
+}
+.completed {
+  text-decoration: line-through;
+}
+.bg-task {
+  background-color: #f55f44;
+}
+.w-49 {
+  width: 49%;
+}
+.form-select option:hover {
+  background-color: #71c55d !important;
+}
