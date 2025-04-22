@@ -90,7 +90,8 @@ function beCompleted(id) {
   });
 
   localStorage.setItem("allToDos", JSON.stringify(todos));
-  displayData(todos);
+  filterTasks(mySelect.value);
+
 }
 
 function filterTasks(filterType, searchQuery = "") {
